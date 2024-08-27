@@ -28,7 +28,7 @@ public class Supplier {
     @Column(name = "nature_of_Business")
     private String natureOfBusiness;
 
-//    @ElementCollection
-//    private List<String> manufacturingProcesses;
+    @ElementCollection
+    private List<String> manufacturingProcesses;
 
 }
