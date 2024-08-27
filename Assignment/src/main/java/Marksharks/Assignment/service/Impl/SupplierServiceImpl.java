@@ -4,6 +4,8 @@ import Marksharks.Assignment.model.Supplier;
 import Marksharks.Assignment.repository.SupplierRepository;
 import Marksharks.Assignment.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,8 +24,8 @@ public class SupplierServiceImpl implements SupplierService {
     }
 
     @Override
-    public List<Supplier> searchSuppliers(String location, String natureOfBusiness, List<String> manufacturingProcesses) {
+    public Page<Supplier> searchSuppliers(String location, String natureOfBusiness, List<String> manufacturingProcesses, Pageable pageable) {
         return supplierRepository.findByLocationAndNatureOfBusinessAndManufacturingProcessesIn(
-                location, natureOfBusiness, manufacturingProcesses);
+                location, natureOfBusiness, manufacturingProcesses, pageable);
     }
 }

@@ -1,6 +1,8 @@
 package Marksharks.Assignment.service;
 
 import Marksharks.Assignment.model.Supplier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +12,8 @@ public interface SupplierService {
 
     Supplier createSupplier(Supplier supplier);
 
-    List<Supplier> searchSuppliers(String location, String natureOfBusiness, List<String> manufacturingProcesses);
+    Page<Supplier> searchSuppliers(String location, String natureOfBusiness, List<String> manufacturingProcesses, Pageable pageable);
+
+
 
 }
