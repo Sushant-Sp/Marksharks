@@ -1,13 +1,9 @@
+# Marksharks Supplier Management API
 
+## Overview
 
-### 2. Search for Suppliers
-Endpoint: GET /api/supplier/search
-
-#### Parameters:
-
-- 'location' : The Location of the supplier.
-- 'natureOfBusiness': The nature Of Business of the supplier.
-- 'manufacturingProcesses': A list of manufacturing processes.
+This project is a Supplier Management API built with Spring Boot.
+The API allows for creating and searching suppliers based on various parameters such as location, nature of business, and manufacturing processes.
 
 ## Features
 
